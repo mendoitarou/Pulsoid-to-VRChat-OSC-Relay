@@ -1,0 +1,43 @@
+{
+  "name": "pulsoid-to-vrc-osc",
+  "version": "1.0.0",
+  "description": "Relay heart rate data from Pulsoid directly to VRChat via OSC (vrc-osc-miband-hrm compatible)",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:exe": "npm run build && npx @yao-pkg/pkg . --targets node22-win-x64 --output bin/pulsoid-to-vrc-osc.exe",
+    "start": "ts-node src/index.ts",
+    "start:prod": "node dist/index.js",
+    "test": "ts-node src/test-e2e.ts",
+    "test:receiver": "ts-node src/test-receiver.ts",
+    "test:mock-pulsoid": "ts-node src/test-pulsoid-mock.ts"
+  },
+  "pkg": {
+    "targets": [
+      "node22-win-x64"
+    ],
+    "outputPath": "bin"
+  },
+  "keywords": [
+    "pulsoid",
+    "vrchat",
+    "osc",
+    "heart-rate",
+    "vrc-osc-miband-hrm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "osc": "^2.4.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/ws": "^8.5.13",
+    "@yao-pkg/pkg": "^6.22.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

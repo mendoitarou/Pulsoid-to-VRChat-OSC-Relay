@@ -1,0 +1,17 @@
+{
+  "pulsoid": {
+    "widgetUrlOrId": ""
+  },
+  "vrchat": {
+    "oscHost": "127.0.0.1",
+    "oscPort": 9000
+  },
+  "chatbox": {
+    "enabled": false,
+    "template": "❤{HR} bpm",
+    "minIntervalMs": 1300
+  },
+  "heartrate": {
+    "skipZero": true
+  }
+}

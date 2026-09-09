@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: pulsoid-to-vrc-osc
+    network_mode: "host"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
